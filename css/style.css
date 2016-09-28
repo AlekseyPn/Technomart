@@ -538,7 +538,7 @@ ul {
     margin-right: 0;
 }
 
-.catalog-item .item-hover {
+.catalog-item .catalog-item--controls {
     position: absolute;
     top: 0;
     left: 0;
@@ -551,7 +551,7 @@ ul {
     background: #fff;
 }
 
-.item-hover .item {
+.catalog-item--controls .item {
     width: 141px;
     margin: 0 auto;
     padding: 10px;
@@ -563,7 +563,7 @@ ul {
     border-radius: 3px;
 }
 
-.item-hover .item-buy {
+.catalog-item--controls .item-buy {
     margin-bottom: 7px;
     color: #fff;
     text-align: left;
@@ -571,31 +571,31 @@ ul {
     box-shadow: inset 0 -3px 0 0 #367315;
 }
 
-.item-hover .item-buy::before {
+.catalog-item--controls .item-buy::before {
     margin-right: 25px;
 }
 
-.item-hover .item-buy:hover {
+.catalog-item--controls .item-buy:hover {
     background-color: #5fbb2d;
 }
 
-.item-hover .item-buy:active {
+.catalog-item--controls .item-buy:active {
     background-color: #518534;
     box-shadow: none;
 }
 
-.item-hover .item-bookmark {
+.catalog-item--controls .item-bookmark {
     padding: 7px;
     color: #32425c;
     background: #fff;
     border: 3px solid #63a63e;
 }
 
-.item-hover .item-bookmark:hover {
+.catalog-item--controls .item-bookmark:hover {
     border-color: #32425c;
 }
 
-.item-hover .item-bookmark:active {
+.catalog-item--controls .item-bookmark:active {
     border-color: #32425c;
     opacity: 0.3;
 }
@@ -651,7 +651,7 @@ ul {
     border-left-color: #ee3643;
 }
 
-.catalog-item:hover .item-hover {
+.catalog-item:hover .catalog-item--controls {
     display: block;
 }
 
@@ -1161,9 +1161,12 @@ ul {
     font-size: 0;
 }
 
-.breadcrumb a {
+.breadcrumb li {
     display: inline-block;
     vertical-align: top;
+}
+
+.breadcrumb a {    
     font-size: 13px;
     font-family: 'PTsans', sans-serif;
     line-height: 18px;
