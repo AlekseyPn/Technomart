@@ -433,7 +433,7 @@ ul {
     height: 10px;
 }
 
-.slide-dots .dots {
+.dots {
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -1166,7 +1166,7 @@ ul {
     vertical-align: top;
 }
 
-.breadcrumb a {    
+.breadcrumb a {
     font-size: 13px;
     font-family: 'PTsans', sans-serif;
     line-height: 18px;

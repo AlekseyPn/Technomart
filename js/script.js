@@ -9,6 +9,8 @@ var openMap = document.querySelector(".map");
 var userName = document.querySelector("[name='name']");
 var btnSlide = document.querySelectorAll(".btn-slide");
 var slide = document.querySelectorAll(".slide");
+var dots = document.querySelectorAll(".dots");
+var currentDot = 0;
 var currentSlide = 0;
 
 for (i = 0; i < openModal.length; i++) {
@@ -64,6 +66,15 @@ function nextSlide() {
     goToSlide(currentSlide + 1);
 };
 
+function nextDot() {
+    goToDot(currentDot + 1);
+};
+
+function goToDot(n) {
+    dots[currentDot].className = "dots dot-active";
+    currentDot = (n + dots.length) % dots.length;
+    dots[currentDot].className = "dots";
+}
 
 function goToSlide(n) {
     slide[currentSlide].className = "slide  slide-show"
@@ -73,5 +84,6 @@ function goToSlide(n) {
 for (i = 0; i < btnSlide.length; i++) {
     btnSlide[i].addEventListener("click", function() {
         nextSlide();
+        nextDot();
     });
 };
